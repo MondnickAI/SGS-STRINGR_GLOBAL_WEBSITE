@@ -1,0 +1,42 @@
+{
+  "slug": "it-technical-services",
+  "order": 1,
+  "title": "IT & Technical Services",
+  "shortTitle": "IT & Technical",
+  "icon": "server",
+  "tagline": "Secure systems. Reliable operations. Scalable solutions.",
+  "summary": "Managed IT, software and AI development, cybersecurity and data management delivered by one accountable technical team.",
+  "intro": "From day-to-day infrastructure management to custom software and AI integration, our technical division keeps your systems secure, available and ready to scale. We combine traditional IT management with AI-driven monitoring and automation to reduce downtime and free your team to focus on the business.",
+  "seo": {
+    "title": "IT & Technical Services",
+    "description": "Managed IT services, cloud, service desk, AI and software development, QA, cybersecurity and database administration from STRINGR GLOBAL SERVICES."
+  },
+  "groups": [
+    {
+      "title": "Infrastructure & Managed IT",
+      "services": [
+        "managed-it-services",
+        "network-systems-administration",
+        "cloud-computing-virtualisation",
+        "it-support-service-desk"
+      ]
+    },
+    {
+      "title": "Software & Web Development",
+      "services": [
+        "ai-development-integration",
+        "web-development-management",
+        "custom-software-app-development",
+        "quality-assurance-testing"
+      ]
+    },
+    {
+      "title": "Cybersecurity & Data Management",
+      "services": [
+        "cybersecurity-services",
+        "data-backup-disaster-recovery",
+        "database-administration"
+      ]
+    }
+  ]
+}

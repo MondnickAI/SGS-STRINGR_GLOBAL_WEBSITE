@@ -1,0 +1,42 @@
+{
+  "slug": "virtual-assistant-services",
+  "order": 2,
+  "title": "Virtual Assistant Services",
+  "shortTitle": "Virtual Assistants",
+  "icon": "laptop",
+  "tagline": "Skilled virtual talent. Real business support. Whenever you need it.",
+  "summary": "Dedicated virtual professionals for administration, sales and marketing support, creative work and bookkeeping.",
+  "intro": "Our virtual assistants take on the administrative, marketing and back-office work that slows growing teams down. You gain skilled, managed support that integrates with your tools and ways of working, without the overhead of expanding your in-house headcount.",
+  "seo": {
+    "title": "Virtual Assistant Services",
+    "description": "Virtual assistant services covering administration, inbox and calendar management, data entry, digital marketing, lead generation, e-commerce and bookkeeping."
+  },
+  "groups": [
+    {
+      "title": "Administrative & Operations Support",
+      "services": [
+        "email-inbox-management",
+        "calendar-schedule-management",
+        "data-entry-management",
+        "travel-event-planning",
+        "document-processing"
+      ]
+    },
+    {
+      "title": "Sales, Marketing & Creative Support",
+      "services": [
+        "social-media-management",
+        "digital-marketing-seo",
+        "lead-generation-market-research",
+        "e-commerce-management",
+        "design-systems-brand-strategy"
+      ]
+    },
+    {
+      "title": "Finance Support",
+      "services": [
+        "virtual-bookkeeping-accounting"
+      ]
+    }
+  ]
+}

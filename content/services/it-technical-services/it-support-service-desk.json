@@ -1,0 +1,23 @@
+{
+  "slug": "it-support-service-desk",
+  "title": "IT Support & Service Desk",
+  "icon": "life-buoy",
+  "summary": "Level 1 to Level 3 technical troubleshooting, remote desktop assistance and ticketing management.",
+  "includes": [
+    "Level 1 to Level 3 troubleshooting",
+    "Remote desktop assistance",
+    "Ticketing management",
+    "Structured escalation"
+  ],
+  "problems": [
+    "Employees lose productive time waiting for IT help",
+    "Requests are tracked in inboxes and chat threads rather than a proper queue",
+    "Complex issues have no clear escalation route"
+  ],
+  "delivery": "Our service desk gives your users a single, dependable route to technical help. Issues are logged, prioritised and resolved through tiered support, with automated workflow routing directing each ticket to the right specialist.",
+  "value": [
+    "Faster resolution of everyday IT issues",
+    "Full visibility of requests and their status",
+    "A better experience for your employees"
+  ]
+}

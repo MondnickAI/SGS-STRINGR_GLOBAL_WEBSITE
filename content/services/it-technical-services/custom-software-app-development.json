@@ -1,0 +1,23 @@
+{
+  "slug": "custom-software-app-development",
+  "title": "Custom Software & App Development",
+  "icon": "code",
+  "summary": "Web application development, mobile app building for iOS and Android, and API integration.",
+  "includes": [
+    "Web application development",
+    "Mobile apps for iOS and Android",
+    "API integration",
+    "Integration with existing systems"
+  ],
+  "problems": [
+    "Off-the-shelf software does not fit the way the business works",
+    "Manual processes and spreadsheets hold critical operations together",
+    "Separate systems cannot share data with each other"
+  ],
+  "delivery": "We develop web and mobile applications around your requirements and connect them to the systems you already depend on, with quality assurance built into the delivery process.",
+  "value": [
+    "Software shaped around your processes",
+    "Less manual, duplicated work",
+    "Connected systems and cleaner data flows"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "contact-center-bpo-services",
+  "order": 3,
+  "title": "Contact Center & BPO Services",
+  "shortTitle": "Contact Center & BPO",
+  "icon": "headset",
+  "tagline": "Experienced agents, supported by conversational AI.",
+  "summary": "Inbound, outbound and omnichannel customer operations that pair experienced agents with conversational AI and real-time agent assist.",
+  "intro": "Our contact center operations combine seasoned customer service and sales agents with conversational AI and real-time agent-assist technology. Routine enquiries are resolved faster, wait times fall, and complex conversations still receive genuine human attention.",
+  "seo": {
+    "title": "Contact Center & BPO Services",
+    "description": "Hybrid contact center and BPO services: inbound and outbound call handling, omnichannel and non-voice support delivered by experienced agents with AI assistance."
+  },
+  "groups": [
+    {
+      "title": "Customer Operations",
+      "services": [
+        "inbound-call-center-services",
+        "outbound-call-center-services",
+        "omnichannel-non-voice-support"
+      ]
+    }
+  ]
+}

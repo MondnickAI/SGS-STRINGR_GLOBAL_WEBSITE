@@ -1,0 +1,24 @@
+{
+  "slug": "ai-development-integration",
+  "title": "AI Development & Integration",
+  "icon": "brain",
+  "summary": "LLM fine-tuning, RAG pipeline building, custom AI agents, computer vision and NLP model integration via APIs.",
+  "includes": [
+    "LLM fine-tuning",
+    "RAG pipeline building",
+    "Custom AI agents",
+    "Computer vision",
+    "NLP model integration via APIs"
+  ],
+  "problems": [
+    "Uncertainty about where AI can deliver practical value",
+    "Generic AI tools that do not know your business or your data",
+    "Proofs of concept that never reach day-to-day use"
+  ],
+  "delivery": "We design and build AI capabilities around specific business processes, connecting language models, retrieval pipelines and custom agents to your existing systems through APIs so they are useful in real workflows.",
+  "value": [
+    "AI applied to real, defined business problems",
+    "Solutions grounded in your own knowledge and data",
+    "Capabilities that integrate with the tools you already use"
+  ]
+}

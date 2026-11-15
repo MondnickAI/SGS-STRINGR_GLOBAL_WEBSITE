@@ -1,0 +1,23 @@
+{
+  "slug": "network-systems-administration",
+  "title": "Network & Systems Administration",
+  "icon": "network",
+  "summary": "Router and switch configurations, VPN setups, Active Directory and user access management.",
+  "includes": [
+    "Router and switch configuration",
+    "VPN setup and maintenance",
+    "Active Directory administration",
+    "User access management"
+  ],
+  "problems": [
+    "Network changes are made ad hoc and are poorly documented",
+    "Remote and hybrid staff struggle with secure access",
+    "User accounts and permissions drift out of date"
+  ],
+  "delivery": "Our administrators configure and maintain the network and directory services your people rely on every day. Changes are handled in a controlled way so that access stays secure, consistent and easy to audit.",
+  "value": [
+    "Stable, well-managed connectivity",
+    "Secure access for office and remote teams",
+    "Clear control over who can access what"
+  ]
+}

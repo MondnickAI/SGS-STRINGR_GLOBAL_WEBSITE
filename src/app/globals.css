@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Brand tokens. Orange/golden yellow primary, charcoal secondary, white/light grey support. */
+@theme {
+  --color-brand-50: #fff7ea;
+  --color-brand-100: #ffe9c6;
+  --color-brand-200: #fed794;
+  --color-brand-300: #fdc35c;
+  --color-brand-400: #fbac2c;
+  --color-brand-500: #f7931e;
+  --color-brand-600: #dd7709;
+  --color-brand-700: #b0560a; /* accessible orange for text on white */
+
+  --color-ink-50: #f7f8f9;
+  --color-ink-100: #eef0f2;
+  --color-ink-200: #dfe2e6;
+  --color-ink-300: #c3c8cf;
+  --color-ink-400: #99a0ab;
+  --color-ink-500: #6a717d;
+  --color-ink-600: #4b515c;
+  --color-ink-700: #353a44;
+  --color-ink-800: #23272f;
+  --color-ink-900: #181b21;
+  --color-ink-950: #101216;
+}
+
+@theme inline {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-heading), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-white);
+    color: var(--color-ink-600);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink-950);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-brand-200);
+    color: var(--color-ink-950);
+  }
+}
+
+/* Subtle dotted texture used on dark panels (echoes the dotted world map in the company profile). */
+@utility bg-dots {
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.09) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

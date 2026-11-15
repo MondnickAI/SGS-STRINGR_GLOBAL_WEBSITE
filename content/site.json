@@ -1,0 +1,33 @@
+{
+  "name": "STRINGR GLOBAL SERVICES",
+  "shortName": "STRINGR",
+  "tagline": "Smart Solutions. Seamless Operations.",
+  "description": "STRINGR GLOBAL SERVICES delivers IT solutions, virtual assistant services and BPO, combining skilled people, intelligent technology and seamless operations.",
+  "contact": {
+    "email": "info@stringr-ai.com",
+    "phones": [
+      {
+        "label": "Office",
+        "display": "+63 43 783 0485",
+        "local": "043-783-0485",
+        "tel": "+63437830485"
+      },
+      {
+        "label": "Mobile",
+        "display": "+63 917 187 4514",
+        "local": "0917 187 4514",
+        "tel": "+639171874514"
+      }
+    ],
+    "address": {
+      "lines": [
+        "Unit 3, 2nd Floor, LWG Realty",
+        "Brgy. 4, Sto. Tomas"
+      ],
+      "locality": "Sto. Tomas",
+      "region": "Batangas",
+      "country": "Philippines",
+      "countryCode": "PH"
+    }
+  }
+}

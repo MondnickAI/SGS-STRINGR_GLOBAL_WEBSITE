@@ -1,0 +1,178 @@
+{
+  "positioning": {
+    "headline": "Skilled people. Intelligent technology. Seamless operations.",
+    "summary": "STRINGR GLOBAL SERVICES is a technology-driven outsourcing partner. We bring IT solutions, virtual assistance and contact center operations together under one accountable team, so your business can work smarter and grow stronger."
+  },
+  "introduction": [
+    "STRINGR GLOBAL SERVICES is a solutions-driven company committed to delivering smart, reliable and seamless services for organisations operating in a fast-changing global environment. We combine practical expertise, responsive service and modern solutions to help our clients improve operations, strengthen efficiency and achieve sustainable business growth.",
+    "Our approach is built around understanding each client's needs and providing dependable solutions that are efficient, flexible and results-oriented. With a focus on professionalism, integrity and operational excellence, STRINGR GLOBAL SERVICES aims to be a trusted partner for businesses seeking consistent support and smarter ways of working."
+  ],
+  "story": [
+    "Founded eight years ago as a specialised virtual team, our organisation has grown into a fully registered corporation delivering outsourcing and technology solutions for businesses that expect enterprise standards and an agile partner.",
+    "We deliver high-impact outsourcing and technology solutions by combining two critical forces: experienced human intelligence and modern artificial intelligence. Our core leadership and operational team bring deep domain knowledge, strict compliance standards and strategic rigour to every engagement."
+  ],
+  "commitment": [
+    {
+      "title": "Smart Solutions",
+      "icon": "lightbulb",
+      "text": "Practical, modern answers shaped around the way your business actually operates."
+    },
+    {
+      "title": "Seamless Operations",
+      "icon": "refresh",
+      "text": "Dependable day-to-day delivery that fits into your existing teams, tools and processes."
+    },
+    {
+      "title": "Reliable Service",
+      "icon": "shield-check",
+      "text": "Consistent, professional support you can plan around and build on."
+    }
+  ],
+  "mission": "To empower global businesses by delivering seamless IT solutions, elite virtual assistance, and scalable BPO services that optimise operations, accelerate growth, and drive sustainable success.",
+  "vision": "To be the preferred global partner for technology-driven outsourcing, recognised for bridging technology, talent, and operational excellence to shape the future of modern work.",
+  "pillars": [
+    {
+      "title": "Operational Excellence",
+      "icon": "settings",
+      "text": "Providing high-calibre virtual talent and BPO infrastructure to streamline workflows and reduce overhead."
+    },
+    {
+      "title": "Technology Innovation",
+      "icon": "cpu",
+      "text": "Leveraging modern IT tools and reliable systems to secure, automate and elevate business processes."
+    },
+    {
+      "title": "Client-Centric Growth",
+      "icon": "users",
+      "text": "Tailoring agile, end-to-end outsourcing solutions designed to scale alongside our clients' evolving needs."
+    }
+  ],
+  "aims": [
+    {
+      "title": "Global Reach",
+      "icon": "globe",
+      "text": "Expanding support networks to serve startups, mid-market companies and enterprises across the globe."
+    },
+    {
+      "title": "Workforce Elevation",
+      "icon": "graduation",
+      "text": "Cultivating a world-class team of tech specialists and virtual professionals empowered by continuous learning and a positive work culture."
+    },
+    {
+      "title": "Digital Transformation",
+      "icon": "trending-up",
+      "text": "Transforming traditional operational models into dynamic, technology-enabled growth engines."
+    }
+  ],
+  "values": [
+    {
+      "title": "Integrity",
+      "icon": "shield-check",
+      "text": "Maintaining transparency, data security and ethical standards across all client engagements."
+    },
+    {
+      "title": "Agility",
+      "icon": "gauge",
+      "text": "Adapting swiftly to changing technology and market demands to give clients a competitive edge."
+    },
+    {
+      "title": "Collaboration",
+      "icon": "users",
+      "text": "Operating as a natural extension of our clients' internal teams."
+    },
+    {
+      "title": "Excellence",
+      "icon": "award",
+      "text": "Setting high benchmarks for quality, response times and service reliability."
+    }
+  ],
+  "differentiators": [
+    {
+      "title": "Hybrid Contact Center Operations",
+      "icon": "headset",
+      "text": "We pair seasoned customer service and sales agents with conversational AI and real-time agent-assist technology. This speeds up resolution times, cuts long wait times and maintains genuine human connection for complex customer interactions."
+    },
+    {
+      "title": "Intelligent IT Infrastructure & Managed Services",
+      "icon": "server",
+      "text": "Our tech division combines traditional IT system maintenance, cybersecurity and helpdesk support with AI-driven predictive monitoring and automated workflow routing to minimise system downtime."
+    },
+    {
+      "title": "Enterprise Capability, Agile Execution",
+      "icon": "trending-up",
+      "text": "Because our processes are augmented by modern technology and streamlined operating models, we deliver enterprise-level capability while maintaining the speed, flexibility and responsiveness of an agile partner."
+    }
+  ],
+  "reasons": [
+    {
+      "title": "Hybrid human and AI operations",
+      "icon": "sparkles",
+      "text": "Experienced professionals lead every engagement, supported by AI where it makes work faster, more accurate or more consistent."
+    },
+    {
+      "title": "Technology-driven service delivery",
+      "icon": "cpu",
+      "text": "Modern IT tools, monitoring and automation are built into how we deliver, not added on afterwards."
+    },
+    {
+      "title": "Operational efficiency",
+      "icon": "settings",
+      "text": "Streamlined workflows and BPO infrastructure designed to reduce overhead and remove day-to-day friction."
+    },
+    {
+      "title": "Flexible and scalable teams",
+      "icon": "layers",
+      "text": "Start with the support you need today and adjust the size and skills of your team as your requirements change."
+    },
+    {
+      "title": "Client-centric approach",
+      "icon": "handshake",
+      "text": "Solutions are tailored to each client's needs and we work as a natural extension of your internal team."
+    },
+    {
+      "title": "Reliable business support",
+      "icon": "shield-check",
+      "text": "Professionalism, integrity and consistent service quality that you can depend on over the long term."
+    }
+  ],
+  "expertise": [
+    {
+      "title": "Human Expertise",
+      "icon": "handshake",
+      "text": "Seasoned professionals with real-world experience and industry best practices."
+    },
+    {
+      "title": "AI Precision",
+      "icon": "cpu",
+      "text": "Smarter automation, faster insights and higher efficiency."
+    },
+    {
+      "title": "Compliance & Security",
+      "icon": "shield-check",
+      "text": "Strict data protection and compliance standards applied to every engagement."
+    },
+    {
+      "title": "Scalable Solutions",
+      "icon": "trending-up",
+      "text": "Flexible teams and tech-driven processes that grow with you."
+    }
+  ],
+  "engagement": [
+    {
+      "title": "Understand",
+      "text": "We start by understanding your business, your current processes and the outcome you need."
+    },
+    {
+      "title": "Design",
+      "text": "We propose the right mix of people, process and technology, sized to your requirements."
+    },
+    {
+      "title": "Deliver",
+      "text": "Your STRINGR team works as an extension of your own, with clear communication and accountability."
+    },
+    {
+      "title": "Improve",
+      "text": "We review how the service is performing and refine it as your needs evolve."
+    }
+  ]
+}

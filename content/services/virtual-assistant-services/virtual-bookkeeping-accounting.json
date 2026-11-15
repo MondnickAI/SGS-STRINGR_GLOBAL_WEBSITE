@@ -1,0 +1,23 @@
+{
+  "slug": "virtual-bookkeeping-accounting",
+  "title": "Virtual Bookkeeping & Accounting",
+  "icon": "calculator",
+  "summary": "Invoicing, tracking expenses, payroll assistance and bank reconciliation.",
+  "includes": [
+    "Invoicing",
+    "Expense tracking",
+    "Payroll assistance",
+    "Bank reconciliation"
+  ],
+  "problems": [
+    "Books fall behind during busy periods",
+    "Invoices go out late",
+    "Owners and managers handle bookkeeping themselves"
+  ],
+  "delivery": "Our virtual bookkeepers keep your financial records current, handling invoicing, expenses and reconciliations within your accounting software.",
+  "value": [
+    "Up-to-date financial records",
+    "Prompt invoicing",
+    "Less administration for owners and managers"
+  ]
+}

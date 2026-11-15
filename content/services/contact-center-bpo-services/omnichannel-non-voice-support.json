@@ -1,0 +1,23 @@
+{
+  "slug": "omnichannel-non-voice-support",
+  "title": "Omnichannel & Non-Voice Support",
+  "icon": "messages",
+  "summary": "Live chat management, email ticketing, social media support and SMS and messaging response handling.",
+  "includes": [
+    "Live chat management",
+    "Email ticketing",
+    "Social media support",
+    "SMS and messaging response handling"
+  ],
+  "problems": [
+    "Customers expect answers on the channel they choose",
+    "Chat, email and social enquiries are handled in separate silos",
+    "Response times vary from one channel to another"
+  ],
+  "delivery": "We manage customer conversations across chat, email, social media and messaging, with shared context so customers receive a consistent answer whichever channel they use.",
+  "value": [
+    "Consistent service on every channel",
+    "Faster responses to written enquiries",
+    "One joined-up view of customer contact"
+  ]
+}

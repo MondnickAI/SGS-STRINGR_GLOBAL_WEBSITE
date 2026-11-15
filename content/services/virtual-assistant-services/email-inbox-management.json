@@ -1,0 +1,23 @@
+{
+  "slug": "email-inbox-management",
+  "title": "Email & Inbox Management",
+  "icon": "mail",
+  "summary": "Sorting, drafting responses, prioritising emails and managing spam.",
+  "includes": [
+    "Inbox sorting and organisation",
+    "Drafting responses",
+    "Prioritising important messages",
+    "Spam management"
+  ],
+  "problems": [
+    "Important messages are buried in a crowded inbox",
+    "Leaders spend hours each day on email",
+    "Replies to clients and partners are delayed"
+  ],
+  "delivery": "A dedicated virtual assistant manages your inbox to agreed rules, drafting responses and surfacing what needs your attention so nothing important is missed.",
+  "value": [
+    "More time for high-value work",
+    "Faster, more consistent responses",
+    "A clear, organised inbox"
+  ]
+}

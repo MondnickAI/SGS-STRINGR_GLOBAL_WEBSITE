@@ -1,0 +1,23 @@
+{
+  "slug": "cybersecurity-services",
+  "title": "Cybersecurity Services",
+  "icon": "shield",
+  "summary": "Threat detection, endpoint protection, firewall management and vulnerability assessments.",
+  "includes": [
+    "Threat detection",
+    "Endpoint protection",
+    "Firewall management",
+    "Vulnerability assessments"
+  ],
+  "problems": [
+    "Limited visibility of threats across devices and networks",
+    "Security tools are installed but not actively managed",
+    "Weaknesses go unnoticed until an incident occurs"
+  ],
+  "delivery": "We manage the core layers of your security: monitoring for threats, protecting endpoints, maintaining firewalls and assessing vulnerabilities so that risks are identified and addressed early.",
+  "value": [
+    "Stronger protection for systems and data",
+    "Risks identified before they are exploited",
+    "Greater confidence for clients and stakeholders"
+  ]
+}

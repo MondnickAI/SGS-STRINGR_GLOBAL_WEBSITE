@@ -1,0 +1,23 @@
+{
+  "slug": "e-commerce-management",
+  "title": "E-Commerce Management",
+  "icon": "shopping-cart",
+  "summary": "Product listing, inventory tracking, order fulfilment and managing platforms such as Shopify or Amazon.",
+  "includes": [
+    "Product listing",
+    "Inventory tracking",
+    "Order fulfilment support",
+    "Shopify and Amazon store management"
+  ],
+  "problems": [
+    "Listings are incomplete or out of date",
+    "Stock levels and orders are hard to keep on top of",
+    "Store administration distracts from growing the business"
+  ],
+  "delivery": "We manage the daily running of your online store, from listings and stock to order processing, on the platforms you sell through.",
+  "value": [
+    "Accurate, well-maintained listings",
+    "Orders processed promptly",
+    "More time to focus on growth"
+  ]
+}

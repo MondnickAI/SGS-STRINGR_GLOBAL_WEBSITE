@@ -1,0 +1,23 @@
+{
+  "slug": "calendar-schedule-management",
+  "title": "Calendar & Schedule Management",
+  "icon": "calendar",
+  "summary": "Booking appointments, setting up meetings and setting reminders.",
+  "includes": [
+    "Appointment booking",
+    "Meeting set-up and coordination",
+    "Reminders and follow-ups",
+    "Diary organisation"
+  ],
+  "problems": [
+    "Double bookings and missed meetings",
+    "Time lost to back-and-forth scheduling",
+    "Diaries that do not reflect real priorities"
+  ],
+  "delivery": "Your assistant coordinates meetings across time zones, keeps your calendar accurate and makes sure you and your attendees are prepared.",
+  "value": [
+    "A well-organised working week",
+    "Fewer scheduling conflicts",
+    "Smoother coordination with clients and colleagues"
+  ]
+}

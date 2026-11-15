@@ -1,0 +1,24 @@
+{
+  "slug": "inbound-call-center-services",
+  "title": "Inbound Call Center Services",
+  "icon": "phone-incoming",
+  "summary": "Inbound customer support, order processing, technical helpdesk, emergency dispatch and inbound sales enquiries.",
+  "includes": [
+    "Inbound customer support",
+    "Order processing",
+    "Technical helpdesk",
+    "Emergency dispatch",
+    "Inbound sales and enquiries"
+  ],
+  "problems": [
+    "Long wait times and missed calls",
+    "In-house teams stretched at peak times",
+    "Inconsistent customer experience"
+  ],
+  "delivery": "Experienced agents handle your inbound contacts, supported by conversational AI and real-time agent assist that provide the right information during each conversation.",
+  "value": [
+    "Shorter wait times",
+    "Faster, more consistent resolutions",
+    "Capacity that flexes with demand"
+  ]
+}

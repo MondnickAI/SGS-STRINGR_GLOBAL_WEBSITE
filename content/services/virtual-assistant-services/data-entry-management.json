@@ -1,0 +1,23 @@
+{
+  "slug": "data-entry-management",
+  "title": "Data Entry & Management",
+  "icon": "table",
+  "summary": "Updating databases, spreadsheets and CRM records, and file organisation.",
+  "includes": [
+    "Database and spreadsheet updates",
+    "CRM record maintenance",
+    "File organisation",
+    "Data clean-up"
+  ],
+  "problems": [
+    "Out-of-date or inconsistent records",
+    "Skilled staff tied up with repetitive data work",
+    "Decisions made on unreliable information"
+  ],
+  "delivery": "We keep your records accurate and current, following your data standards and checking work for consistency.",
+  "value": [
+    "Reliable, up-to-date business data",
+    "Staff released from repetitive tasks",
+    "Better-informed decisions"
+  ]
+}

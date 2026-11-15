@@ -1,0 +1,23 @@
+{
+  "slug": "lead-generation-market-research",
+  "title": "Lead Generation & Market Research",
+  "icon": "search",
+  "summary": "Prospecting, web research, competitor research and contact list creation.",
+  "includes": [
+    "Prospecting",
+    "Web research",
+    "Competitor research",
+    "Contact list creation"
+  ],
+  "problems": [
+    "Sales teams spend selling time on research",
+    "Prospect lists are thin or out of date",
+    "Limited insight into competitors and markets"
+  ],
+  "delivery": "We research your target market and build structured prospect lists so your sales team can concentrate on conversations.",
+  "value": [
+    "A steady flow of researched prospects",
+    "More selling time for your sales team",
+    "Clearer market and competitor insight"
+  ]
+}

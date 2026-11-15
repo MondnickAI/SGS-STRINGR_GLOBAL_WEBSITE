@@ -1,0 +1,23 @@
+{
+  "slug": "cloud-computing-virtualisation",
+  "title": "Cloud Computing & Virtualisation",
+  "icon": "cloud",
+  "summary": "AWS, Azure and GCP management, cloud migration, virtual desktop infrastructure (VDI) and cloud backup solutions.",
+  "includes": [
+    "AWS, Azure and GCP management",
+    "Cloud migration",
+    "Virtual desktop infrastructure (VDI)",
+    "Cloud backup solutions"
+  ],
+  "problems": [
+    "Ageing on-premise systems are costly to maintain and hard to scale",
+    "Cloud environments grow without clear ownership or oversight",
+    "Teams need consistent desktops and tools wherever they work"
+  ],
+  "delivery": "We plan and manage cloud environments on the major platforms, migrate workloads in a structured way, and operate virtual desktops and cloud backups so your infrastructure can scale with demand.",
+  "value": [
+    "Infrastructure that scales with the business",
+    "Reduced reliance on ageing hardware",
+    "Consistent, managed environments for distributed teams"
+  ]
+}

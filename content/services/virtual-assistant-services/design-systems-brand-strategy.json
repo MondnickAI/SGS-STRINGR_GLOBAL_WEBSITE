@@ -1,0 +1,23 @@
+{
+  "slug": "design-systems-brand-strategy",
+  "title": "Design Systems & Brand Strategy",
+  "icon": "palette",
+  "summary": "Building UI component libraries in Figma and Adobe XD, brand style guides, token management and multi-platform design consistency.",
+  "includes": [
+    "UI component libraries (Figma, Adobe XD)",
+    "Brand style guides",
+    "Design token management",
+    "Multi-platform design consistency"
+  ],
+  "problems": [
+    "Inconsistent branding across products and channels",
+    "Designers and developers recreate the same components",
+    "No single source of truth for brand standards"
+  ],
+  "delivery": "We build and maintain the design foundations, including components, tokens and style guides, that keep your brand consistent across every platform.",
+  "value": [
+    "A consistent brand experience",
+    "Faster design and development work",
+    "Clear standards for teams and partners"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "travel-event-planning",
+  "title": "Travel & Event Planning",
+  "icon": "plane",
+  "summary": "Researching and booking flights, hotels, itineraries and venue arrangements.",
+  "includes": [
+    "Flight and hotel research and booking",
+    "Itinerary preparation",
+    "Venue arrangements",
+    "Event coordination support"
+  ],
+  "problems": [
+    "Travel arrangements consume management time",
+    "Last-minute changes cause disruption",
+    "Events lack a single point of coordination"
+  ],
+  "delivery": "Your assistant researches options, makes bookings and prepares clear itineraries, managing changes as plans develop.",
+  "value": [
+    "Well-organised business travel",
+    "Less time spent on logistics",
+    "Events that run to plan"
+  ]
+}

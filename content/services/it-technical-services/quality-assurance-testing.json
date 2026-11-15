@@ -1,0 +1,23 @@
+{
+  "slug": "quality-assurance-testing",
+  "title": "Quality Assurance (QA) & Testing",
+  "icon": "check-circle",
+  "summary": "Manual and automated software testing, security testing and bug tracking.",
+  "includes": [
+    "Manual software testing",
+    "Automated testing",
+    "Security testing",
+    "Bug tracking and reporting"
+  ],
+  "problems": [
+    "Defects reach customers before the team finds them",
+    "Releases are delayed by late, unstructured testing",
+    "Development teams have no independent check on quality"
+  ],
+  "delivery": "Our QA specialists test software methodically, combining manual and automated approaches and tracking every defect through to resolution so that releases are dependable.",
+  "value": [
+    "More reliable releases",
+    "Issues found earlier, when they are cheaper to fix",
+    "Clear visibility of product quality"
+  ]
+}

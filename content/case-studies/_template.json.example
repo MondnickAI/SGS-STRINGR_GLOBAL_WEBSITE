@@ -1,0 +1,12 @@
+{
+  "slug": "example-case-study",
+  "title": "Short, factual title of the engagement",
+  "client": "Client name, or a description such as 'UK retail business' if the client is confidential",
+  "division": "it-technical-services",
+  "summary": "One or two sentences describing the engagement.",
+  "challenge": "What the client needed.",
+  "solution": "What STRINGR delivered.",
+  "results": [
+    "Only verified, client-approved outcomes."
+  ]
+}

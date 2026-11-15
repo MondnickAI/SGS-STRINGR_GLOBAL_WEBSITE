@@ -1,0 +1,23 @@
+{
+  "slug": "digital-marketing-seo",
+  "title": "Digital Marketing & SEO",
+  "icon": "megaphone",
+  "summary": "Email marketing campaigns, keyword research and basic website copywriting.",
+  "includes": [
+    "Email marketing campaigns",
+    "Keyword research",
+    "Basic website copywriting",
+    "Campaign support"
+  ],
+  "problems": [
+    "Marketing activity is sporadic",
+    "Website content is not aligned with what customers search for",
+    "Small teams lack time to run campaigns"
+  ],
+  "delivery": "Our virtual marketing support plans and executes campaigns, researches keywords and prepares copy to keep your marketing moving.",
+  "value": [
+    "Regular, organised marketing activity",
+    "Content aligned with customer searches",
+    "Marketing capacity without additional headcount"
+  ]
+}

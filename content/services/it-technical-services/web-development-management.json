@@ -1,0 +1,23 @@
+{
+  "slug": "web-development-management",
+  "title": "Web Development & Management",
+  "icon": "globe",
+  "summary": "Website setup, maintenance, plugin updates, bug fixing and CMS management for platforms such as WordPress and Webflow.",
+  "includes": [
+    "Website setup",
+    "Ongoing maintenance and plugin updates",
+    "Bug fixing",
+    "CMS management (WordPress, Webflow)"
+  ],
+  "problems": [
+    "Websites fall out of date once the original build is finished",
+    "Unpatched plugins create security and stability risks",
+    "Small content changes depend on scarce developer time"
+  ],
+  "delivery": "We build websites and then keep them healthy. Our team handles updates, fixes and content management on an ongoing basis so your site remains secure, current and aligned with the business.",
+  "value": [
+    "A website that stays secure and up to date",
+    "Quick turnaround on changes and fixes",
+    "One team responsible for build and upkeep"
+  ]
+}

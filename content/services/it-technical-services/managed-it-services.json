@@ -1,0 +1,23 @@
+{
+  "slug": "managed-it-services",
+  "title": "Managed IT Services (MSP)",
+  "icon": "server",
+  "summary": "24/7 network monitoring, infrastructure maintenance and system health checks.",
+  "includes": [
+    "24/7 network monitoring",
+    "Infrastructure maintenance",
+    "System health checks",
+    "Proactive issue identification"
+  ],
+  "problems": [
+    "IT problems are only noticed after they disrupt the business",
+    "Internal staff spend their time firefighting instead of improving systems",
+    "Maintenance and patching slip when the team is busy"
+  ],
+  "delivery": "We take responsibility for the routine care of your IT environment. Systems are monitored around the clock, maintenance is carried out on a planned basis, and AI-driven predictive monitoring helps us act on warning signs before they become downtime.",
+  "value": [
+    "Fewer unplanned outages and interruptions",
+    "Predictable, managed IT operations",
+    "Internal teams freed to focus on strategic work"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "document-processing",
+  "title": "Document Processing",
+  "icon": "file-text",
+  "summary": "Transcribing audio and video, formatting documents and creating business presentations.",
+  "includes": [
+    "Audio and video transcription",
+    "Document formatting",
+    "Business presentations",
+    "Template and report preparation"
+  ],
+  "problems": [
+    "Inconsistent, unpolished business documents",
+    "Recordings and notes that never get written up",
+    "Presentations prepared in a rush"
+  ],
+  "delivery": "We turn raw material into clear, professionally formatted documents and presentations that follow your brand standards.",
+  "value": [
+    "Professional, consistent documents",
+    "Faster turnaround on written work",
+    "More time for the content itself"
+  ]
+}

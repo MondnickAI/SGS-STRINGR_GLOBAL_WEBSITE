@@ -1,0 +1,23 @@
+{
+  "slug": "database-administration",
+  "title": "Database Administration (DBA)",
+  "icon": "database",
+  "summary": "Database optimisation, backups, migrations and query tuning for SQL and NoSQL platforms.",
+  "includes": [
+    "Database optimisation",
+    "Backups",
+    "Migrations",
+    "Query tuning (SQL and NoSQL)"
+  ],
+  "problems": [
+    "Applications slow down as data volumes grow",
+    "Migrations are risky without specialist oversight",
+    "No one owns the day-to-day health of the database"
+  ],
+  "delivery": "Our database administrators look after performance, integrity and availability, tuning queries, managing backups and handling migrations with care.",
+  "value": [
+    "Faster, more responsive applications",
+    "Data that is protected and recoverable",
+    "Smooth, controlled database changes"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "outbound-call-center-services",
+  "title": "Outbound Call Center Services",
+  "icon": "phone-outgoing",
+  "summary": "Cold calling, telemarketing, appointment setting, customer surveys, debt collection and market research campaigns.",
+  "includes": [
+    "Cold calling and telemarketing",
+    "Appointment setting",
+    "Customer surveys",
+    "Debt collection",
+    "Market research campaigns"
+  ],
+  "problems": [
+    "Outreach is irregular because internal teams are busy",
+    "Sales pipelines lack qualified appointments",
+    "Customer feedback is not gathered systematically"
+  ],
+  "delivery": "Our outbound teams run structured campaigns on your behalf, following agreed scripts, quality standards and the regulations that apply in your market.",
+  "value": [
+    "Consistent, professional outreach",
+    "More qualified appointments for your sales team",
+    "Reliable customer and market feedback"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "data-backup-disaster-recovery",
+  "title": "Data Backup & Disaster Recovery",
+  "icon": "database-backup",
+  "summary": "Data redundancy setup, automated cloud backups and disaster recovery planning.",
+  "includes": [
+    "Data redundancy setup",
+    "Automated cloud backups",
+    "Disaster recovery planning",
+    "Recovery readiness"
+  ],
+  "problems": [
+    "Backups are irregular, manual or untested",
+    "No agreed plan for restoring operations after an incident",
+    "Critical data is held in a single location"
+  ],
+  "delivery": "We put redundancy and automated backups in place and work with you on a recovery plan, so that the business knows how it will restore systems and data if something goes wrong.",
+  "value": [
+    "Protection against data loss",
+    "A clear route back to normal operations",
+    "Reduced business risk from outages and incidents"
+  ]
+}

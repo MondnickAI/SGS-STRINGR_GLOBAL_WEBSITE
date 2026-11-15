@@ -1,0 +1,23 @@
+{
+  "slug": "social-media-management",
+  "title": "Social Media Management",
+  "icon": "share",
+  "summary": "Content scheduling, graphic design with Canva and Photoshop, and community management.",
+  "includes": [
+    "Content scheduling",
+    "Graphic design (Canva, Photoshop)",
+    "Community management",
+    "Channel upkeep"
+  ],
+  "problems": [
+    "Irregular posting and inactive channels",
+    "Comments and messages left unanswered",
+    "No in-house capacity for design"
+  ],
+  "delivery": "We plan and schedule content, produce on-brand graphics and engage with your community so your channels stay active and professional.",
+  "value": [
+    "A consistent social media presence",
+    "Timely engagement with your audience",
+    "On-brand visuals without an in-house designer"
+  ]
+}
