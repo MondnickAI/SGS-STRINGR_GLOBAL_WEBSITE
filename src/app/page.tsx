@@ -36,7 +36,7 @@ export default function HomePage() {
         />
 
         <div className={`${container} relative`}>
-          <div className="animate-rise py-16 sm:py-20 lg:max-w-[47%] lg:py-24 xl:py-28">
+          <div className="animate-rise py-16 sm:py-20 lg:max-w-[47%] lg:pb-24 lg:pt-32 xl:pb-28 xl:pt-36">
             <Eyebrow light>IT Solutions · Virtual Assistance · BPO</Eyebrow>
             <h1 className="mt-6 text-[2.35rem] font-extrabold leading-[1.08] text-white sm:text-5xl xl:text-6xl">
               Skilled people. Intelligent technology. <span className="text-brand-500">Seamless operations.</span>
@@ -53,7 +53,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Photo with diagonal brand geometry. Stacked under the text on small screens. */}
+        {/* Photo with a slanted edge. Stacked under the text on small screens. */}
         <div className="relative h-64 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[52%]">
           <div className="absolute inset-0 lg:[clip-path:polygon(30%_0,100%_0,100%_100%,8%_100%)]">
             <Image
@@ -67,24 +67,33 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-ink-950/55 via-ink-950/10 to-transparent" />
           </div>
           <div className="absolute inset-x-0 top-0 h-1.5 bg-brand-500 lg:hidden" aria-hidden="true" />
-          <div
-            className="absolute inset-0 hidden bg-brand-500 lg:block lg:[clip-path:polygon(19%_0,28.5%_0,6.5%_100%,0_100%,0_86%)]"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 hidden bg-brand-300 lg:block lg:[clip-path:polygon(29.3%_0,30.3%_0,8.3%_100%,7.3%_100%)]"
-            aria-hidden="true"
-          />
-          {/* Counter-diagonal wedge that crosses the photo's lower corner. */}
-          <div
-            className="absolute inset-0 hidden bg-ink-950 lg:block lg:[clip-path:polygon(8.3%_100%,36%_100%,17.5%_58%)]"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 hidden bg-brand-500 lg:block lg:[clip-path:polygon(36%_100%,39.5%_100%,19.3%_54%,17.5%_58%)]"
-            aria-hidden="true"
-          />
         </div>
+
+        {/*
+          Hero divider: the folded orange arrowhead from the SGS logo. A horizontal bar runs along the
+          top of the hero and folds into the diagonal that separates the text from the photo.
+          Coordinates are percentages of the hero, so the shape scales with it.
+        */}
+        <svg
+          className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="hero-arrow-bar" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stopColor="#f26a1b" />
+              <stop offset="0.55" stopColor="#fb9a1c" />
+              <stop offset="1" stopColor="#ffcb1f" />
+            </linearGradient>
+            <linearGradient id="hero-arrow-leg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fb9a1c" />
+              <stop offset="1" stopColor="#ee6312" />
+            </linearGradient>
+          </defs>
+          <polygon points="38.5,0 63,0 56.03,12 37.13,12" fill="url(#hero-arrow-bar)" />
+          <polygon points="63,0 51.56,100 45.96,100 56.03,12" fill="url(#hero-arrow-leg)" />
+        </svg>
       </section>
 
       {/* ------------------------------------------------------ commitment */}
