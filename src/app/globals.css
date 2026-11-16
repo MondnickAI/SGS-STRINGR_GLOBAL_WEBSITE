@@ -230,6 +230,261 @@
   }
 }
 
+/*
+  Hero radar (markup in components/HeroRadar.tsx). One 13 second cycle: the origin glows, then a
+  pulse expands from the centre and reaches ring k at 0.5s + k x 2s. Each ring brightens as the
+  pulse arrives and its service label shows for just under two seconds, so only one label is lit
+  at a time. Only transforms and opacity are animated.
+*/
+.radar-ring-1 {
+  --ring-color: var(--color-brand-300);
+  --ring-rest: 0.34;
+}
+.radar-ring-2 {
+  --ring-color: var(--color-brand-400);
+  --ring-rest: 0.28;
+}
+.radar-ring-3 {
+  --ring-color: var(--color-brand-500);
+  --ring-rest: 0.22;
+}
+.radar-ring-4 {
+  --ring-color: var(--color-brand-600);
+  --ring-rest: 0.18;
+}
+.radar-ring-5 {
+  --ring-color: var(--color-brand-700);
+  --ring-rest: 0.16;
+}
+
+.radar-ring,
+.radar-wave,
+.radar-core,
+.radar-origin {
+  position: absolute;
+  border-radius: 9999px;
+}
+
+/* Ring k is k/rings of the radar's width. The soft glow fades with the ring. */
+.radar-ring {
+  inset: calc((var(--rings) - var(--k)) * 50% / var(--rings));
+  border: 1px solid var(--ring-color);
+  box-shadow:
+    0 0 14px color-mix(in srgb, var(--ring-color) 45%, transparent),
+    inset 0 0 14px color-mix(in srgb, var(--ring-color) 22%, transparent);
+  opacity: var(--ring-rest);
+  animation: radar-ring 13s ease-in-out infinite;
+  animation-delay: calc(0.5s + var(--k) * 2s);
+}
+
+/* The pulse: a bright rim with a short amber trail inside it. */
+.radar-wave {
+  --wave-peak: 0.9;
+  inset: 0;
+  border: 1px solid var(--color-brand-300);
+  background: radial-gradient(
+    closest-side,
+    transparent 70%,
+    color-mix(in srgb, var(--color-brand-500) 16%, transparent) 98%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: scale(0);
+  will-change: transform, opacity;
+  animation: radar-wave 13s linear infinite;
+}
+
+.radar-wave-echo {
+  --wave-peak: 0.35;
+  animation-delay: 0.8s;
+}
+
+.radar-core {
+  inset: calc(50% - 1.125rem);
+  border: 1px solid var(--color-brand-300);
+  opacity: 0.4;
+}
+
+.radar-origin {
+  inset: calc(50% - 0.25rem);
+  background: var(--color-brand-300);
+  box-shadow: 0 0 12px 2px color-mix(in srgb, var(--color-brand-400) 70%, transparent);
+  opacity: 0.6;
+  animation: radar-origin 13s ease-out infinite;
+}
+
+/* Labels share one grid cell, so each appears in the same place. */
+.radar-labels {
+  display: grid;
+}
+
+.radar-label {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: radar-label 13s ease-out infinite;
+  animation-delay: calc(0.5s + var(--k) * 2s);
+}
+
+.radar-label-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex-shrink: 0;
+  border: 1px solid var(--ring-color);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px var(--ring-color);
+}
+
+@keyframes radar-wave {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  3.85% {
+    transform: scale(0);
+    opacity: var(--wave-peak);
+  }
+  80.77% {
+    transform: scale(1);
+    opacity: calc(var(--wave-peak) * 0.35);
+  }
+  88.46%,
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes radar-ring {
+  0% {
+    opacity: var(--ring-rest);
+  }
+  2.7% {
+    opacity: 0.95;
+  }
+  11.5% {
+    opacity: 0.8;
+  }
+  17.7%,
+  100% {
+    opacity: var(--ring-rest);
+  }
+}
+
+@keyframes radar-origin {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  3.85% {
+    transform: scale(1.9);
+    opacity: 1;
+  }
+  12%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes radar-label {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  3.1%,
+  11.5% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  14.6%,
+  100% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+}
+
+/*
+  Hero slides (markup in components/HeroSlides.tsx). Five slides of 5.5 seconds each, 27.5 seconds
+  in all. A slide fades in over 0.8s while the one before fades out; its title slides up first,
+  then the description and keywords. The timings assume five slides. At rest (and under reduced
+  motion) the first slide is shown with its text.
+*/
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: hero-slide 27.5s linear infinite;
+  /* The 0.8s head start means the first slide is already fully visible when the page loads. */
+  animation-delay: calc(var(--n) * 5.5s - 0.8s);
+}
+
+.hero-slide:first-child {
+  opacity: 1;
+}
+
+.hero-slide-text {
+  animation: hero-slide-text 27.5s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+  animation-delay: calc(var(--n) * 5.5s - 0.8s);
+}
+
+.hero-slide-text-late {
+  animation-delay: calc(var(--n) * 5.5s - 0.45s);
+}
+
+@keyframes hero-slide {
+  0% {
+    opacity: 0;
+  }
+  2.91%,
+  20% {
+    opacity: 1;
+  }
+  22.91%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-slide-text {
+  0%,
+  1.6% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  4.4%,
+  22.91% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  23%,
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Reduced motion: still rings, and on wide screens the service names as one static line. */
+@media (prefers-reduced-motion: reduce) {
+  .radar-labels {
+    display: none;
+  }
+
+  @media (min-width: 64rem) {
+    .radar-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+    }
+
+    .radar-label {
+      opacity: 1;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

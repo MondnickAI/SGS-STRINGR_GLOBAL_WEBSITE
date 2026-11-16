@@ -3,6 +3,68 @@
     "headline": "Skilled people. Intelligent technology. Seamless operations.",
     "summary": "STRINGR GLOBAL SERVICES is a technology-driven outsourcing partner. We bring IT solutions, virtual assistance and contact center operations together under one accountable team, so your business can work smarter and grow stronger."
   },
+  "serviceLayers": [
+    {
+      "label": "IT Solutions",
+      "highlight": "IT",
+      "description": "We deliver technology-driven solutions that help businesses modernise their systems, improve digital capabilities, and maintain reliable IT operations.",
+      "keywords": [
+        "Technology",
+        "Development",
+        "IT Support"
+      ],
+      "image": "/images/hero-team.jpg",
+      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+    },
+    {
+      "label": "Virtual Assistance",
+      "highlight": "Virtual",
+      "description": "We provide dependable remote professionals who handle administrative tasks, executive assistance, data management, and daily business support, allowing clients to focus on growth.",
+      "keywords": [
+        "Administrative Support",
+        "Executive Assistance",
+        "Data Management"
+      ],
+      "image": "/images/team-collaboration.jpg",
+      "imageAlt": "A team collaborating around a table with laptops"
+    },
+    {
+      "label": "Business Process Outsourcing",
+      "highlight": "Outsourcing",
+      "description": "We help businesses streamline operations through reliable back-office support, process management, and outsourced business functions that improve efficiency and productivity.",
+      "keywords": [
+        "Back-Office Support",
+        "Process Management",
+        "Operational Efficiency"
+      ],
+      "image": "/images/hero-team.jpg",
+      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+    },
+    {
+      "label": "Contact Center Operations",
+      "highlight": "Contact Center",
+      "description": "We deliver professional inbound and outbound communication support, customer engagement, and lead generation services that help businesses build stronger customer relationships.",
+      "keywords": [
+        "Inbound Support",
+        "Outbound Support",
+        "Customer Engagement"
+      ],
+      "image": "/images/team-collaboration.jpg",
+      "imageAlt": "A team collaborating around a table with laptops"
+    },
+    {
+      "label": "Business Operations",
+      "highlight": "Business",
+      "description": "We support business performance through coordinated workflows, operational management, and process optimisation, helping organisations achieve smoother and more accountable operations.",
+      "keywords": [
+        "Workflow Management",
+        "Operational Coordination",
+        "Process Optimisation"
+      ],
+      "image": "/images/hero-team.jpg",
+      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+    }
+  ],
   "introduction": [
     "STRINGR GLOBAL SERVICES is a solutions-driven company committed to delivering smart, reliable and seamless services for organisations operating in a fast-changing global environment. We combine practical expertise, responsive service and modern solutions to help our clients improve operations, strengthen efficiency and achieve sustainable business growth.",
     "Our approach is built around understanding each client's needs and providing dependable solutions that are efficient, flexible and results-oriented. With a focus on professionalism, integrity and operational excellence, STRINGR GLOBAL SERVICES aims to be a trusted partner for businesses seeking consistent support and smarter ways of working."

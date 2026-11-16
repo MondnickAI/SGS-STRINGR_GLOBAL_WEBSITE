@@ -41,8 +41,22 @@ export interface Feature {
   icon?: string;
 }
 
+/**
+ * One homepage hero service: a ring of the radar and a slide in the photo panel.
+ * `highlight` is the part of `label` shown in orange.
+ */
+export interface ServiceLayer {
+  label: string;
+  highlight: string;
+  description: string;
+  keywords: string[];
+  image: string;
+  imageAlt: string;
+}
+
 export interface Company {
   positioning: { headline: string; summary: string };
+  serviceLayers: ServiceLayer[];
   introduction: string[];
   story: string[];
   commitment: Feature[];

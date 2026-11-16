@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { HeroRadarLabels, HeroRadarRings } from "@/components/HeroRadar";
+import { HeroSlides } from "@/components/HeroSlides";
 import { Icon } from "@/components/Icon";
 import {
   ButtonLink,
@@ -25,18 +27,12 @@ export default function HomePage() {
       {/* ------------------------------------------------------------ hero */}
       <section className="relative overflow-hidden bg-ink-950">
         <div className="bg-dots absolute inset-0" aria-hidden="true" />
-        {/* Faint concentric rings behind the headline. */}
-        <div
-          className="absolute -left-40 top-1/2 hidden h-[44rem] w-[44rem] -translate-y-1/2 rounded-full border border-white/[0.06] lg:block"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute -left-16 top-1/2 hidden h-[30rem] w-[30rem] -translate-y-1/2 rounded-full border border-brand-500/15 lg:block"
-          aria-hidden="true"
-        />
+        {/* Concentric radar rings behind the headline. */}
+        <HeroRadarRings count={company.serviceLayers.length} />
 
         <div className={`${container} relative`}>
-          <div className="animate-rise py-16 sm:py-20 lg:max-w-[47%] lg:pb-24 lg:pt-32 xl:pb-28 xl:pt-36">
+          <div className="animate-rise relative py-16 sm:py-20 lg:max-w-[47%] lg:pb-24 lg:pt-32 xl:pb-28 xl:pt-36">
+            <HeroRadarLabels layers={company.serviceLayers} />
             <Eyebrow light>IT Solutions · Virtual Assistance · BPO</Eyebrow>
             <h1 className="mt-6 text-[2.35rem] font-extrabold leading-[1.08] text-white sm:text-5xl xl:text-6xl">
               Skilled people. Intelligent technology. <span className="text-brand-500">Seamless operations.</span>
@@ -56,15 +52,7 @@ export default function HomePage() {
         {/* Photo with a slanted edge. Stacked under the text on small screens. */}
         <div className="relative h-64 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[52%]">
           <div className="absolute inset-0 lg:[clip-path:polygon(30%_0,100%_0,100%_100%,8%_100%)]">
-            <Image
-              src="/images/hero-team.jpg"
-              alt="IT professionals working at their desks in a bright, modern office"
-              fill
-              priority
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="object-cover object-[70%_center]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink-950/55 via-ink-950/10 to-transparent" />
+            <HeroSlides layers={company.serviceLayers} />
           </div>
           <div className="absolute inset-x-0 top-0 h-1.5 overflow-hidden bg-brand-500 lg:hidden" aria-hidden="true">
             <span className="hero-flow-strip" />
