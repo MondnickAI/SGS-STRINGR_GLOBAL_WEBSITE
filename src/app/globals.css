@@ -92,6 +92,144 @@
   animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+/*
+  Hero light flow. Warm light travels through the orange arrowhead on the homepage hero: left to
+  right along the top bar, bottom to top along the diagonal. Each overlay is clipped to the same
+  percentages as its SVG polygon in page.tsx, so keep the two in step. Only transforms and opacity
+  are animated. Each track's resting transform is the still, lit state used under reduced motion.
+*/
+.hero-flow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: hero-flow-breathe 7.3s ease-in-out infinite alternate;
+}
+
+.hero-flow-bar {
+  clip-path: polygon(0 0, 63% 0, 56.03% 12%, 0 12%);
+}
+
+.hero-flow-leg {
+  clip-path: polygon(63% 0, 51.56% 100%, 45.96% 100%, 56.03% 12%);
+}
+
+/* A track is the size of the hero, so its percentage translations are percentages of the hero. */
+.hero-flow-track {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.hero-flow-x {
+  transform: translateX(12%);
+  animation: hero-flow-x 6s linear infinite;
+}
+
+.hero-flow-up {
+  transform: translate(8.7%, -80%);
+  animation: hero-flow-up 5s linear infinite;
+}
+
+/* The second band in each shape runs half a pass behind the first. */
+.hero-flow-x.hero-flow-late {
+  animation-delay: -3s;
+}
+
+.hero-flow-up.hero-flow-late {
+  animation-delay: -2.5s;
+}
+
+/* Bar band: bright leading edge on the right, amber trail behind it. */
+.hero-flow-band-x {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 12%;
+  background:
+    radial-gradient(ellipse 34% 95% at 74% 38%, rgb(255 203 31 / 0.5), transparent 72%),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(251 154 28 / 0.3) 42%,
+      rgb(255 203 31 / 0.6) 78%,
+      transparent 100%
+    );
+}
+
+/* Diagonal band: bright leading edge at the top, tilted to sit square across the diagonal. */
+.hero-flow-band-up {
+  position: absolute;
+  top: 100%;
+  left: 35.5%;
+  width: 20%;
+  height: 60%;
+  transform: skewY(12deg);
+  background:
+    radial-gradient(ellipse 60% 30% at 50% 26%, rgb(255 203 31 / 0.5), transparent 72%),
+    linear-gradient(
+      to top,
+      transparent 0%,
+      rgb(251 154 28 / 0.3) 42%,
+      rgb(255 203 31 / 0.6) 78%,
+      transparent 100%
+    );
+}
+
+.hero-flow-band-soft {
+  opacity: 0.55;
+}
+
+/* Small screens: the same left-to-right light on the thin orange strip above the photo. */
+.hero-flow-strip {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 50%;
+  background: linear-gradient(90deg, transparent, rgb(255 203 31 / 0.9) 75%, transparent);
+  transform: translateX(50%);
+  animation: hero-flow-strip 6s linear infinite;
+}
+
+/* Each pass starts and ends with the band fully outside its shape, so the loop has no visible jump. */
+@keyframes hero-flow-x {
+  from {
+    transform: translateX(-45%);
+  }
+  to {
+    transform: translateX(63%);
+  }
+}
+
+/* Moves along the diagonal's own centre line: 10.9% across for every 100% up. */
+@keyframes hero-flow-up {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(17.4%, -160%);
+  }
+}
+
+@keyframes hero-flow-strip {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes hero-flow-breathe {
+  from {
+    opacity: 0.78;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

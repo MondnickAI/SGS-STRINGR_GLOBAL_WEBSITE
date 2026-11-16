@@ -66,12 +66,14 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-ink-950/55 via-ink-950/10 to-transparent" />
           </div>
-          <div className="absolute inset-x-0 top-0 h-1.5 bg-brand-500 lg:hidden" aria-hidden="true" />
+          <div className="absolute inset-x-0 top-0 h-1.5 overflow-hidden bg-brand-500 lg:hidden" aria-hidden="true">
+            <span className="hero-flow-strip" />
+          </div>
         </div>
 
         {/*
           Hero divider: the folded orange arrowhead from the SGS logo. A horizontal bar runs along the
-          top of the hero and folds into the diagonal that separates the text from the photo.
+          top of the hero from the left edge and folds into the diagonal that separates the text from the photo.
           Coordinates are percentages of the hero, so the shape scales with it.
         */}
         <svg
@@ -81,9 +83,11 @@ export default function HomePage() {
           aria-hidden="true"
         >
           <defs>
-            <linearGradient id="hero-arrow-bar" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stopColor="#f26a1b" />
-              <stop offset="0.55" stopColor="#fb9a1c" />
+            {/* User-space stops, so the bar's right-hand part keeps its colours however far left it runs. */}
+            <linearGradient id="hero-arrow-bar" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="63" y2="0">
+              <stop offset="0" stopColor="#ee6312" />
+              <stop offset="0.589" stopColor="#f26a1b" />
+              <stop offset="0.815" stopColor="#fb9a1c" />
               <stop offset="1" stopColor="#ffcb1f" />
             </linearGradient>
             <linearGradient id="hero-arrow-leg" x1="0" y1="0" x2="0" y2="1">
@@ -91,9 +95,27 @@ export default function HomePage() {
               <stop offset="1" stopColor="#ee6312" />
             </linearGradient>
           </defs>
-          <polygon points="38.5,0 63,0 56.03,12 37.13,12" fill="url(#hero-arrow-bar)" />
+          <polygon points="0,0 63,0 56.03,12 0,12" fill="url(#hero-arrow-bar)" />
           <polygon points="63,0 51.56,100 45.96,100 56.03,12" fill="url(#hero-arrow-leg)" />
         </svg>
+
+        {/* Light flowing through the arrowhead (see "Hero light flow" in globals.css). */}
+        <div className="hero-flow hero-flow-bar hidden lg:block" aria-hidden="true">
+          <div className="hero-flow-track hero-flow-x">
+            <span className="hero-flow-band-x" />
+          </div>
+          <div className="hero-flow-track hero-flow-x hero-flow-late">
+            <span className="hero-flow-band-x hero-flow-band-soft" />
+          </div>
+        </div>
+        <div className="hero-flow hero-flow-leg hidden lg:block" aria-hidden="true">
+          <div className="hero-flow-track hero-flow-up">
+            <span className="hero-flow-band-up" />
+          </div>
+          <div className="hero-flow-track hero-flow-up hero-flow-late">
+            <span className="hero-flow-band-up hero-flow-band-soft" />
+          </div>
+        </div>
       </section>
 
       {/* ------------------------------------------------------ commitment */}
