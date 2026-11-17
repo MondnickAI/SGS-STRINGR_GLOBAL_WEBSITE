@@ -208,10 +208,10 @@ export default function HomePage() {
               aria-hidden="true"
             />
             <Image
-              src="/images/team-collaboration.jpg"
-              alt="A team collaborating around a table with laptops"
-              width={1400}
-              height={919}
+              src="/images/service-business-operations.webp"
+              alt="A team leader guiding a colleague through work on a laptop"
+              width={1289}
+              height={1221}
               sizes="(min-width: 1024px) 46vw, 92vw"
               className="relative aspect-[4/3] w-full object-cover"
             />
