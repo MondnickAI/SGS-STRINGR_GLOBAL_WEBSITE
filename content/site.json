@@ -29,5 +29,22 @@
       "country": "Philippines",
       "countryCode": "PH"
     }
-  }
+  },
+  "social": [
+    {
+      "network": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/stringraiph/"
+    },
+    {
+      "network": "linkedin",
+      "label": "LinkedIn",
+      "url": "/"
+    },
+    {
+      "network": "x",
+      "label": "X",
+      "url": "/"
+    }
+  ]
 }

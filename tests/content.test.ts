@@ -30,6 +30,16 @@ describe("site.json", () => {
     for (const phone of site.contact.phones) expect(phone.tel).toMatch(/^\+\d{8,15}$/);
     expect(site.contact.address.lines.length).toBeGreaterThan(0);
   });
+
+  it("lists known social networks once each, with https URLs, on-site placeholders or left blank", () => {
+    const networks = site.social.map((profile: { network: string }) => profile.network);
+    expect(new Set(networks).size).toBe(networks.length);
+    for (const profile of site.social) {
+      expect(["facebook", "linkedin", "x"]).toContain(profile.network);
+      expect(nonEmpty(profile.label)).toBe(true);
+      if (profile.url !== "") expect(profile.url).toMatch(/^(https:\/\/\S+|\/\S*)$/);
+    }
+  });
 });
 
 describe("company.json", () => {

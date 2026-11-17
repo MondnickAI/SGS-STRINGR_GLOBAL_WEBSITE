@@ -142,6 +142,7 @@ Release checklist:
 | 7 | **Confirm copy written for the site** | Service-page text (problems addressed, delivery, value), the four-step engagement approach, and the "Finance Support" grouping were written from the company profile and need business sign-off. |
 | 8 | **Spelling convention** | Body copy uses British English for the UK audience; service names keep the company's "Contact Center" / "Call Center" spelling. Confirm or standardise. |
 | 9 | **Company history wording** | The site says "founded eight years ago", as in the profile. A founding year would not go out of date. |
+| 10 | **LinkedIn and X profile URLs** | The footer shows social links from `social` in `content/site.json`. Only Facebook has a real URL so far. LinkedIn and X link to the home page (`"/"`) as placeholders; replace each with the full `https://` profile address when known. |
 
 ## Known limitations
 

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { getDivisions, getSite } from "@/lib/content";
+import { activeSocialLinks, getDivisions, getSite, isExternalProfile } from "@/lib/content";
 import { SITE_URL, absoluteUrl } from "@/lib/site-url";
 import "./globals.css";
 
@@ -54,6 +54,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     description: site.description,
     url: SITE_URL,
     logo: absoluteUrl("/brand/logo.png"),
+    sameAs: activeSocialLinks(site)
+      .filter(isExternalProfile)
+      .map((profile) => profile.url),
     email,
     telephone: phones[0]?.tel,
     address: {

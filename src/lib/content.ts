@@ -23,6 +23,16 @@ export interface Phone {
   tel: string;
 }
 
+/**
+ * A social media profile. Entries with an empty `url` are not shown. A `url` starting with "/" is
+ * an on-site placeholder (for example the home page) until the real profile address is known.
+ */
+export interface SocialLink {
+  network: "facebook" | "linkedin" | "x";
+  label: string;
+  url: string;
+}
+
 export interface Site {
   name: string;
   shortName: string;
@@ -33,6 +43,17 @@ export interface Site {
     phones: Phone[];
     address: { lines: string[]; locality: string; region: string; country: string; countryCode: string };
   };
+  social: SocialLink[];
+}
+
+/** Social profiles that have a URL set. */
+export function activeSocialLinks(site: Site): SocialLink[] {
+  return site.social.filter((link) => link.url.trim() !== "");
+}
+
+/** True when a social link points to an external profile rather than an on-site placeholder. */
+export function isExternalProfile(link: SocialLink): boolean {
+  return link.url.startsWith("https://");
 }
 
 export interface Feature {

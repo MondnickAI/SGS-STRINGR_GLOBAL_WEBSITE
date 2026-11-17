@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { getDivisions, getSite } from "@/lib/content";
+import { activeSocialLinks, getDivisions, getSite, isExternalProfile } from "@/lib/content";
+import { SocialIcon } from "./SocialIcon";
 import { container } from "./ui";
 
 const COMPANY_LINKS = [
@@ -16,8 +17,11 @@ export function Footer() {
   const site = getSite();
   const divisions = getDivisions();
   const { address, phones, email } = site.contact;
+  const social = activeSocialLinks(site);
   const heading = "font-display text-xs font-bold uppercase tracking-[0.18em] text-white";
   const link = "text-ink-300 transition-colors hover:text-brand-400";
+  const socialLink =
+    "flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ink-300 transition-colors hover:border-brand-500 hover:bg-brand-500 hover:text-white focus-visible:border-brand-500";
 
   return (
     <footer className="bg-ink-950 text-ink-300">
@@ -31,6 +35,29 @@ export function Footer() {
           <p className="mt-3 max-w-xs text-sm">
             IT solutions, virtual assistance and business process outsourcing for organisations worldwide.
           </p>
+          {social.length > 0 && (
+            <ul className="mt-6 flex gap-3" aria-label="Follow us">
+              {social.map((profile) => (
+                <li key={profile.network}>
+                  {isExternalProfile(profile) ? (
+                    <a
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${site.name} on ${profile.label} (opens in a new tab)`}
+                      className={socialLink}
+                    >
+                      <SocialIcon network={profile.network} className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <Link href={profile.url} aria-label={`${site.name} on ${profile.label}`} className={socialLink}>
+                      <SocialIcon network={profile.network} className="h-4 w-4" />
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <nav aria-label="Services">
