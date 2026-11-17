@@ -117,10 +117,33 @@ Inquiries are emailed only; nothing is stored on the server.
 ## Deployment
 
 The site needs a host that can run Node.js (for the form endpoint). It is not a static export.
+It is hosted on **Netlify**, deployed from the GitHub repository; the domain and email
+(Titan / GoDaddy Professional Email) stay at GoDaddy (ADR-002).
 
-- **Vercel / Netlify:** import the repository, set the environment variables, deploy.
-- **VPS or Node hosting:** `npm ci && npm run build && npm start` behind HTTPS (e.g. Nginx + PM2).
-- **Shared cPanel hosting without Node:** not supported as built; see ADR-002 for the alternative.
+Build settings are in `netlify.toml` (Node 22, `npm run build`). Netlify detects Next.js and
+applies its runtime automatically: pages are served from its CDN, `/api/contact` runs as a
+serverless function and `next/image` uses Netlify's image CDN.
+
+Environment variables (Netlify > Site configuration > Environment variables):
+
+| Variable | Value |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | `https://www.stringr-ai.com` |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` | `smtp.titan.email` / `465` / `true` (confirm in Titan's email settings) |
+| `SMTP_USER` | The sending mailbox, e.g. `info@stringr-ai.com` |
+| `SMTP_PASS` | That mailbox's password. Mark it as secret in Netlify. |
+| `CONTACT_FROM` | Same as `SMTP_USER` |
+| `CONTACT_TO` | Optional; defaults to the email in `content/site.json` |
+
+GoDaddy DNS for the site (leave the MX, TXT and other email records unchanged):
+
+| Type | Name | Value |
+|---|---|---|
+| `CNAME` | `www` | `<site-name>.netlify.app` |
+| `A` | `@` | `75.2.60.5` (Netlify's load balancer; confirm in the Netlify domain screen) |
+
+Other hosts: any Node 20.9+ server can run `npm ci && npm run build && npm start` behind HTTPS.
+Shared cPanel hosting without Node is not supported as built.
 
 Release checklist:
 
@@ -134,8 +157,8 @@ Release checklist:
 | # | Item | Why it matters |
 |---|---|---|
 | 1 | **Logo version for dark backgrounds, and tagline wording** | The SGS logo (supplied 2026-11-15) has dark lettering, so the footer shows it on a white plate. A light-text version would sit directly on the charcoal footer. The logo reads "Smart Solution Seamless Operation" while the site text uses "Smart Solutions. Seamless Operations."; confirm which is correct. |
-| 2 | **Hosting provider and production domain** | Determines deployment steps; `www.stringr-ai.com` is assumed from the email domain. |
-| 3 | **SMTP credentials** for the mailbox that sends inquiries | The live form cannot deliver without them. |
+| 2 | **Production domain** | Hosting is Netlify (ADR-002). `www.stringr-ai.com` is assumed from the email domain; confirm it is the domain registered at GoDaddy. |
+| 3 | **SMTP credentials** for the Titan mailbox that sends inquiries | The live form cannot deliver without them. Entered by the business in the Netlify dashboard only. |
 | 4 | **Approved case studies** | None were supplied, so none are shown. No client names, statistics, testimonials or certifications have been invented. |
 | 5 | **Photography** (team, office, operations) | The five hero slides use the images supplied on 2026-11-17 (`public/images/service-*.webp`, set per service in `content/company.json`). The "Our expertise" section reuses `service-business-operations.webp`. Confirm their licence and whether they show STRINGR staff. The earlier Unsplash stand-ins (`hero-team.jpg`, `team-collaboration.jpg`) are no longer used. |
 | 6 | **Legal review of the Privacy Policy** | Drafted in plain English for the form as built; it references the Philippine Data Privacy Act and UK GDPR and should be reviewed by a qualified adviser before launch. |

@@ -11,6 +11,11 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  // The inquiry endpoint reads content/ at request time (service options, contact email).
+  // Serverless hosts such as Netlify only ship files the build traces, so include it explicitly.
+  outputFileTracingIncludes: {
+    "/api/contact": ["./content/**/*.json"],
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

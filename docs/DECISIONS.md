@@ -7,7 +7,7 @@ Decisions marked **Accepted** were chosen by the project owner on 2026-11-15. De
 | ADR | Title | Status | Date |
 |---|---|---|---|
 | ADR-001 | Next.js + TypeScript + Tailwind CSS | Accepted | 2026-11-15 |
-| ADR-002 | Host-agnostic Node deployment | Accepted (host TBD) | 2026-11-15 |
+| ADR-002 | Host-agnostic Node deployment, hosted on Netlify | Accepted | 2026-11-17 |
 | ADR-003 | Structured JSON content files instead of a CMS | Accepted | 2026-11-15 |
 | ADR-004 | Inquiry delivery by SMTP | Accepted | 2026-11-15 |
 | ADR-005 | Form abuse protection without third-party services | Proposed | 2026-11-15 |
@@ -26,11 +26,12 @@ Decisions marked **Accepted** were chosen by the project owner on 2026-11-15. De
 - **Consequences:** Requires Node-capable hosting. Content editing needs a rebuild (see ADR-003).
 - **Review trigger:** Next.js 15 reaching end of support; plan the upgrade to the current major.
 
-### ADR-002: Host-agnostic Node deployment
-- **Context:** Hosting is not yet chosen.
-- **Decision:** Build a standard Next.js server application that runs on Vercel, Netlify or any Node host. No platform-specific APIs are used.
-- **Consequences:** Not deployable to PHP-only shared hosting. If that becomes a requirement, switch to `output: "export"` and replace `/api/contact` with a third-party form service or a small PHP mail script.
-- **Review trigger:** Hosting provider selected.
+### ADR-002: Host-agnostic Node deployment, hosted on Netlify
+- **Context:** No hosting had been bought. The domain and email (Titan / GoDaddy Professional Email) are at GoDaddy. GoDaddy's entry-level shared cPanel plans generally cannot run Node.js and commonly block outbound SMTP, which the inquiry form needs.
+- **Options:** GoDaddy shared cPanel; GoDaddy VPS; Vercel Pro (Hobby plan is non-commercial); Netlify.
+- **Decision (2026-11-17):** Host on Netlify, deployed from GitHub, with Node 22 (`netlify.toml`). Keep the domain and email at GoDaddy and point only the website DNS records to Netlify. The application stays a standard Next.js server app with no platform-specific APIs, and `outputFileTracingIncludes` ships `content/` with the inquiry function.
+- **Consequences:** No server to maintain; SSL is automatic. `/api/contact` is serverless, so rate limiting is best-effort (ADR-005). Not deployable to PHP-only shared hosting; that would need `output: "export"` and a replacement for `/api/contact`.
+- **Review trigger:** Netlify plan limits reached, or a move to self-managed hosting.
 
 ### ADR-003: Structured JSON content files instead of a CMS
 - **Options:** JSON files; Git-based visual editor (Keystatic); hosted headless CMS (Sanity).
