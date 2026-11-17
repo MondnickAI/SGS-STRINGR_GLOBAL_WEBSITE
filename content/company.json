@@ -13,8 +13,8 @@
         "Development",
         "IT Support"
       ],
-      "image": "/images/hero-team.jpg",
-      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+      "image": "/images/service-it-solutions.webp",
+      "imageAlt": "A team member working on a laptop in a bright, modern office"
     },
     {
       "label": "Virtual Assistance",
@@ -25,8 +25,8 @@
         "Executive Assistance",
         "Data Management"
       ],
-      "image": "/images/team-collaboration.jpg",
-      "imageAlt": "A team collaborating around a table with laptops"
+      "image": "/images/service-virtual-assistance.webp",
+      "imageAlt": "A remote assistant wearing a headset working on a laptop beside colleagues"
     },
     {
       "label": "Business Process Outsourcing",
@@ -37,8 +37,8 @@
         "Process Management",
         "Operational Efficiency"
       ],
-      "image": "/images/hero-team.jpg",
-      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+      "image": "/images/service-bpo.webp",
+      "imageAlt": "Team members with headsets working at computers in a modern office"
     },
     {
       "label": "Contact Center Operations",
@@ -49,8 +49,8 @@
         "Outbound Support",
         "Customer Engagement"
       ],
-      "image": "/images/team-collaboration.jpg",
-      "imageAlt": "A team collaborating around a table with laptops"
+      "image": "/images/service-contact-center.webp",
+      "imageAlt": "Contact center agents with headsets working at their desks"
     },
     {
       "label": "Business Operations",
@@ -61,8 +61,8 @@
         "Operational Coordination",
         "Process Optimisation"
       ],
-      "image": "/images/hero-team.jpg",
-      "imageAlt": "IT professionals working at their desks in a bright, modern office"
+      "image": "/images/service-business-operations.webp",
+      "imageAlt": "A team leader guiding a colleague through work on a laptop"
     }
   ],
   "introduction": [
