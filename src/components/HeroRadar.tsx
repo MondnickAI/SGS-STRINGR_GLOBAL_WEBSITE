@@ -24,7 +24,6 @@ export function HeroRadarRings({ count }: { count: number }) {
       ))}
       <span className="radar-wave" />
       <span className="radar-wave radar-wave-echo" />
-      <span className="radar-core" />
       <span className="radar-origin" />
     </div>
   );

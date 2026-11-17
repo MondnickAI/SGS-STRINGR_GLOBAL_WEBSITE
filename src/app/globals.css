@@ -73,7 +73,7 @@
 
 /* Subtle dotted texture used on dark panels (echoes the dotted world map in the company profile). */
 @utility bg-dots {
-  background-image: radial-gradient(circle, rgb(255 255 255 / 0.09) 1px, transparent 1.5px);
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.045) 1px, transparent 1.5px);
   background-size: 18px 18px;
 }
 
@@ -93,10 +93,22 @@
 }
 
 /*
-  Hero light flow. Warm light travels through the orange arrowhead on the homepage hero: left to
-  right along the top bar, bottom to top along the diagonal. Each overlay is clipped to the same
-  percentages as its SVG polygon in page.tsx, so keep the two in step. Only transforms and opacity
-  are animated. Each track's resting transform is the still, lit state used under reduced motion.
+  Diagonal divider. One orange-to-yellow gradient (the logo's arrowhead colours, orange at the foot,
+  yellow at the top) shared by every diagonal divider on the site: the homepage hero and PageHero.
+*/
+@utility bg-divider {
+  background-image: linear-gradient(to top, #ee6312 0%, #fb9a1c 55%, #ffcb1f 100%);
+}
+
+/* The homepage divider: a straight-edged diagonal stripe, in percentages of the hero. */
+.hero-divider-shape {
+  clip-path: polygon(59.08% 0, 63% 0, 51.56% 100%, 47.64% 100%);
+}
+
+/*
+  Hero light flow. Warm light travels bottom to top along the homepage divider, clipped to the same
+  shape. Only transforms and opacity are animated. Each track's resting transform is the still, lit
+  state used under reduced motion.
 */
 .hero-flow {
   position: absolute;
@@ -106,14 +118,6 @@
   animation: hero-flow-breathe 7.3s ease-in-out infinite alternate;
 }
 
-.hero-flow-bar {
-  clip-path: polygon(0 0, 63% 0, 56.03% 12%, 0 12%);
-}
-
-.hero-flow-leg {
-  clip-path: polygon(63% 0, 51.56% 100%, 45.96% 100%, 56.03% 12%);
-}
-
 /* A track is the size of the hero, so its percentage translations are percentages of the hero. */
 .hero-flow-track {
   position: absolute;
@@ -121,48 +125,21 @@
   will-change: transform;
 }
 
-.hero-flow-x {
-  transform: translateX(12%);
-  animation: hero-flow-x 6s linear infinite;
-}
-
 .hero-flow-up {
   transform: translate(8.7%, -80%);
   animation: hero-flow-up 5s linear infinite;
 }
 
-/* The second band in each shape runs half a pass behind the first. */
-.hero-flow-x.hero-flow-late {
-  animation-delay: -3s;
-}
-
+/* The second band runs half a pass behind the first. */
 .hero-flow-up.hero-flow-late {
   animation-delay: -2.5s;
-}
-
-/* Bar band: bright leading edge on the right, amber trail behind it. */
-.hero-flow-band-x {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 12%;
-  background:
-    radial-gradient(ellipse 34% 95% at 74% 38%, rgb(255 203 31 / 0.5), transparent 72%),
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      rgb(251 154 28 / 0.3) 42%,
-      rgb(255 203 31 / 0.6) 78%,
-      transparent 100%
-    );
 }
 
 /* Diagonal band: bright leading edge at the top, tilted to sit square across the diagonal. */
 .hero-flow-band-up {
   position: absolute;
   top: 100%;
-  left: 35.5%;
+  left: 36.3%;
   width: 20%;
   height: 60%;
   transform: skewY(12deg);
@@ -193,15 +170,6 @@
 }
 
 /* Each pass starts and ends with the band fully outside its shape, so the loop has no visible jump. */
-@keyframes hero-flow-x {
-  from {
-    transform: translateX(-45%);
-  }
-  to {
-    transform: translateX(63%);
-  }
-}
-
 /* Moves along the diagonal's own centre line: 10.9% across for every 100% up. */
 @keyframes hero-flow-up {
   from {
@@ -234,32 +202,37 @@
   Hero radar (markup in components/HeroRadar.tsx). One 13 second cycle: the origin glows, then a
   pulse expands from the centre and reaches ring k at 0.5s + k x 2s. Each ring brightens as the
   pulse arrives and its service label shows for just under two seconds, so only one label is lit
-  at a time. Only transforms and opacity are animated.
+  at a time. Only transforms and opacity are animated. The rings are deliberately quiet: each one
+  out from the centre rests and peaks fainter than the last, so the origin is the one focal point.
 */
 .radar-ring-1 {
   --ring-color: var(--color-brand-300);
-  --ring-rest: 0.34;
+  --ring-rest: 0.22;
+  --ring-peak: 0.6;
 }
 .radar-ring-2 {
   --ring-color: var(--color-brand-400);
-  --ring-rest: 0.28;
+  --ring-rest: 0.16;
+  --ring-peak: 0.5;
 }
 .radar-ring-3 {
   --ring-color: var(--color-brand-500);
-  --ring-rest: 0.22;
+  --ring-rest: 0.11;
+  --ring-peak: 0.4;
 }
 .radar-ring-4 {
   --ring-color: var(--color-brand-600);
-  --ring-rest: 0.18;
+  --ring-rest: 0.07;
+  --ring-peak: 0.3;
 }
 .radar-ring-5 {
   --ring-color: var(--color-brand-700);
-  --ring-rest: 0.16;
+  --ring-rest: 0.05;
+  --ring-peak: 0.22;
 }
 
 .radar-ring,
 .radar-wave,
-.radar-core,
 .radar-origin {
   position: absolute;
   border-radius: 9999px;
@@ -270,8 +243,8 @@
   inset: calc((var(--rings) - var(--k)) * 50% / var(--rings));
   border: 1px solid var(--ring-color);
   box-shadow:
-    0 0 14px color-mix(in srgb, var(--ring-color) 45%, transparent),
-    inset 0 0 14px color-mix(in srgb, var(--ring-color) 22%, transparent);
+    0 0 10px color-mix(in srgb, var(--ring-color) 28%, transparent),
+    inset 0 0 10px color-mix(in srgb, var(--ring-color) 12%, transparent);
   opacity: var(--ring-rest);
   animation: radar-ring 13s ease-in-out infinite;
   animation-delay: calc(0.5s + var(--k) * 2s);
@@ -279,7 +252,7 @@
 
 /* The pulse: a bright rim with a short amber trail inside it. */
 .radar-wave {
-  --wave-peak: 0.9;
+  --wave-peak: 0.55;
   inset: 0;
   border: 1px solid var(--color-brand-300);
   background: radial-gradient(
@@ -295,14 +268,8 @@
 }
 
 .radar-wave-echo {
-  --wave-peak: 0.35;
+  --wave-peak: 0.2;
   animation-delay: 0.8s;
-}
-
-.radar-core {
-  inset: calc(50% - 1.125rem);
-  border: 1px solid var(--color-brand-300);
-  opacity: 0.4;
 }
 
 .radar-origin {
@@ -362,10 +329,10 @@
     opacity: var(--ring-rest);
   }
   2.7% {
-    opacity: 0.95;
+    opacity: var(--ring-peak);
   }
   11.5% {
-    opacity: 0.8;
+    opacity: calc(var(--ring-peak) * 0.85);
   }
   17.7%,
   100% {

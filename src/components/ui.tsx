@@ -157,7 +157,7 @@ export function PageHero({
         aria-hidden="true"
       />
       <div
-        className="absolute right-60 top-0 hidden h-full w-4 -skew-x-[20deg] bg-brand-300/80 lg:block"
+        className="absolute right-60 top-0 hidden h-full w-4 -skew-x-[20deg] bg-divider lg:block"
         aria-hidden="true"
       />
       <div className={`${container} relative py-16 sm:py-20 lg:py-24`}>

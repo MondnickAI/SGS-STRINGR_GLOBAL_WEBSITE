@@ -31,7 +31,7 @@ export default function HomePage() {
         <HeroRadarRings count={company.serviceLayers.length} />
 
         <div className={`${container} relative`}>
-          <div className="animate-rise relative py-16 sm:py-20 lg:max-w-[47%] lg:pb-24 lg:pt-32 xl:pb-28 xl:pt-36">
+          <div className="animate-rise relative py-16 sm:py-20 lg:max-w-[47%] lg:py-24 xl:py-28">
             <HeroRadarLabels layers={company.serviceLayers} />
             <Eyebrow light>IT Solutions · Virtual Assistance · BPO</Eyebrow>
             <h1 className="mt-6 text-[2.35rem] font-extrabold leading-[1.08] text-white sm:text-5xl xl:text-6xl">
@@ -60,43 +60,16 @@ export default function HomePage() {
         </div>
 
         {/*
-          Hero divider: the folded orange arrowhead from the SGS logo. A horizontal bar runs along the
-          top of the hero from the left edge and folds into the diagonal that separates the text from the photo.
-          Coordinates are percentages of the hero, so the shape scales with it.
+          Hero divider: an orange diagonal, echoing the arrowhead in the SGS logo, that separates the
+          text from the photo. Its shape and gradient are in globals.css ("Diagonal divider").
         */}
-        <svg
-          className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
+        <div
+          className="hero-divider-shape bg-divider pointer-events-none absolute inset-0 hidden lg:block"
           aria-hidden="true"
-        >
-          <defs>
-            {/* User-space stops, so the bar's right-hand part keeps its colours however far left it runs. */}
-            <linearGradient id="hero-arrow-bar" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="63" y2="0">
-              <stop offset="0" stopColor="#ee6312" />
-              <stop offset="0.589" stopColor="#f26a1b" />
-              <stop offset="0.815" stopColor="#fb9a1c" />
-              <stop offset="1" stopColor="#ffcb1f" />
-            </linearGradient>
-            <linearGradient id="hero-arrow-leg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#fb9a1c" />
-              <stop offset="1" stopColor="#ee6312" />
-            </linearGradient>
-          </defs>
-          <polygon points="0,0 63,0 56.03,12 0,12" fill="url(#hero-arrow-bar)" />
-          <polygon points="63,0 51.56,100 45.96,100 56.03,12" fill="url(#hero-arrow-leg)" />
-        </svg>
+        />
 
-        {/* Light flowing through the arrowhead (see "Hero light flow" in globals.css). */}
-        <div className="hero-flow hero-flow-bar hidden lg:block" aria-hidden="true">
-          <div className="hero-flow-track hero-flow-x">
-            <span className="hero-flow-band-x" />
-          </div>
-          <div className="hero-flow-track hero-flow-x hero-flow-late">
-            <span className="hero-flow-band-x hero-flow-band-soft" />
-          </div>
-        </div>
-        <div className="hero-flow hero-flow-leg hidden lg:block" aria-hidden="true">
+        {/* Light flowing up the diagonal (see "Hero light flow" in globals.css). */}
+        <div className="hero-flow hero-divider-shape hidden lg:block" aria-hidden="true">
           <div className="hero-flow-track hero-flow-up">
             <span className="hero-flow-band-up" />
           </div>
