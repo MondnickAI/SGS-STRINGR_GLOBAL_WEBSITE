@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en-GB" className={`${body.variable} ${heading.variable}`}>
-      <body className="flex min-h-dvh flex-col">
+      <body className="flex min-h-dvh flex-col" suppressHydrationWarning>
         <Header
           siteName={site.name}
           divisions={divisions}
