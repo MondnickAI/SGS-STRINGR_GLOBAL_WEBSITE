@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/expertise", priority: 0.8 },
     { path: "/contact", priority: 0.8 },
     { path: "/privacy-policy", priority: 0.2 },
+    { path: "/terms-of-use", priority: 0.2 },
+    { path: "/cookie-policy", priority: 0.2 },
   ];
 
   for (const division of getDivisions()) {

@@ -13,6 +13,12 @@ const COMPANY_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },
 ];
 
+const LEGAL_LINKS = [
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-use", label: "Terms of Use" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
+];
+
 export function Footer() {
   const site = getSite();
   const divisions = getDivisions();
@@ -128,10 +134,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className={`${container} flex flex-col gap-2 py-6 text-xs text-ink-400 sm:flex-row sm:justify-between`}>
+        <div
+          className={`${container} flex flex-col gap-3 py-6 text-xs text-ink-400 lg:flex-row lg:items-center lg:justify-between`}
+        >
           <p>
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
+          <nav aria-label="Legal">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {LEGAL_LINKS.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={link}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <p className="font-display uppercase tracking-[0.18em]">{site.tagline}</p>
         </div>
       </div>

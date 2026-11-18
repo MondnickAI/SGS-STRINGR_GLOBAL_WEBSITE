@@ -94,7 +94,8 @@ docs/DECISIONS.md        Architecture decision log
 ## Pages
 
 Home · About Us · Services (overview, 3 division pages, 25 service pages) · Why Choose Us ·
-Our Expertise · Contact Us · Privacy Policy · 404.
+Our Expertise · Contact Us · Privacy Policy · Terms of Use · Cookie Policy · 404.
+The three legal pages are linked from the footer's bottom strip.
 Also generated: `/sitemap.xml`, `/robots.txt`, `/opengraph-image`.
 
 ## Inquiry form endpoint
@@ -161,7 +162,7 @@ Release checklist:
 | 3 | **SMTP credentials** for the Titan mailbox that sends inquiries | The live form cannot deliver without them. Entered by the business in the Netlify dashboard only. |
 | 4 | **Approved case studies** | None were supplied, so none are shown. No client names, statistics, testimonials or certifications have been invented. |
 | 5 | **Photography** (team, office, operations) | The five hero slides use the images supplied on 2026-11-17 (`public/images/service-*.webp`, set per service in `content/company.json`). The "Our expertise" section reuses `service-business-operations.webp`. Confirm their licence and whether they show STRINGR staff. The earlier Unsplash stand-ins (`hero-team.jpg`, `team-collaboration.jpg`) are no longer used. |
-| 6 | **Legal review of the Privacy Policy** | Drafted in plain English for the form as built; it references the Philippine Data Privacy Act and UK GDPR and should be reviewed by a qualified adviser before launch. |
+| 6 | **Legal review of the Privacy Policy, Terms of Use and Cookie Policy** | Drafted in plain English for the site as built; the Privacy Policy references the Philippine Data Privacy Act and UK GDPR, and the Terms of Use name Philippine law as governing law. All three should be reviewed by a qualified adviser. |
 | 7 | **Confirm copy written for the site** | Service-page text (problems addressed, delivery, value), the four-step engagement approach, and the "Finance Support" grouping were written from the company profile and need business sign-off. |
 | 8 | **Spelling convention** | Body copy uses British English for the UK audience; service names keep the company's "Contact Center" / "Call Center" spelling. Confirm or standardise. |
 | 9 | **Company history wording** | The site says "founded eight years ago", as in the profile. A founding year would not go out of date. |
@@ -170,7 +171,7 @@ Release checklist:
 ## Known limitations
 
 - Rate limiting is in memory, so on serverless hosting it is best-effort (ADR-005).
-- No analytics or cookie banner is installed; the Privacy Policy states this. Update both together if analytics are added.
+- No analytics or cookie banner is installed; the Privacy Policy and Cookie Policy state this. Update all three together if analytics are added.
 - Tailwind CSS is pinned to 4.3.3 because later releases need Node 20.19+. Upgrade Node first, then Tailwind.
 - One moderate `npm audit` advisory remains in development-only lint tooling (`minimatch` via `typescript-eslint`); it does not affect the deployed site.
 - Automated end-to-end browser tests are not included; pages were verified by crawl, HTTP checks and screenshots.
